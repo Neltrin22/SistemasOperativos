@@ -11,7 +11,7 @@ Temas:
 
 Bibliografia: [OSTEP Cap 2 - Introduction](https://pages.cs.wisc.edu/~remzi/OSTEP/intro.pdf)
 
-&emsp;Un programa en ejecucion hace una simple cosa: ejecuta instruccions. Millones e incluso miles de millones por segundo, el procesador busca (**fetchs**) una instruccion de la memoria, la decodifica (decodes), y la ejecuta (**executes**). Despues de ejecutarla, el procesador se mueve a lsa siguiente instruccion y asi sucesivamente hasta que el programa finalmente se completa.
+&emsp;Un programa en ejecucion hace una simple cosa: ejecuta instruccions. Millones e incluso miles de millones por segundo, el procesador busca (**fetchs**) una instruccion de la memoria, la decodifica (decodes), y la ejecuta (**executes**). Despues de ejecutarla, el procesador se mueve a la siguiente instruccion y asi sucesivamente hasta que el programa finalmente se completa.
 &emsp;Y como dice Wolovick:</br>
 
 ```c
@@ -22,7 +22,7 @@ while(true){
 }
 ```
 
-&emsp;El Sistema Operativo (**OS**) es un cuerpo de software que hace que ejecutar programas sea facil, y aparenta permitire ejecutar varios a la vez, le permite a los programas compartir memoria, interactuar con dispositivos, etc.</br>
+&emsp;El Sistema Operativo (**OS**) es un cuerpo de software que hace que ejecutar programas sea facil, y aparenta permitir ejecutar varios a la vez, le permite a los programas compartir memoria, interactuar con dispositivos, etc.</br>
 &emsp;La principal forma en que el OS hace esto, es a traves de una tecnica llamada virtualizacion (**virtualization**). El OS toma recursos fisicos (como el procesador, la memoria, o un disco), y los transorma en una forma virtual de ellos mismos, mas general, poderosa y facil de usar. Por eso, a veces nos referimos al OS como maquina virtual (virtual machine).</br>
 &emsp;Para permitirle a los usuarios poder decirle al OS que hacer, y por lo tanto hacer uso de esas herramientas de la maquina virtual (como ejecutar un programa, asignar memoria, o acceder a un archivo), el OS tambien provee algunas interfaces (APIs) que se pueden llamar (invocar). Un tipico OS, de hecho, exporta algunas cientas de llamadas al sistema (system calls) que estan disponibles para las aplicaciones. Dado que el OS provee esas llamadas para ejecutar programas, acceder a memoria y dispositvos, y otras acciones relacionadas, tambien a veces decimos que el OS provee una libreria estandar (standar library) para aplicaciones.</br>
 &emsp;Finalmente, como la virtualizacion permite ejecutar muchos programas, compartiendo CPU, y muchos programas acceden concurrentemente a sus propias instrucciones y datos, compartiendo memoria, y varios programas acceden a dispositivos, compartiendo disco, y asi sucesivamente, el OS es conocido como un manejador de recursos (**resource manager**). Cada CPU, memoria y disco es un recurso; y el rol del OS es manejar esos recursos, haciendolo de manera eficiente, justa y por supuesto, con otras metas en mente.</br>
